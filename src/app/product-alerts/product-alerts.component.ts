@@ -21,6 +21,9 @@ export class ProductAlertsComponent {
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
   }
+  constructor() {
+    console.log(this.value);
+  }
   ngOnInit() {
     console.log(this.product.price);
   }
