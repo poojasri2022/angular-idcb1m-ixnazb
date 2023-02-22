@@ -1,0 +1,13 @@
+<h2>Product Details</h2>
+<!-- If you don't give ngIf directive here, it will throw error -->
+<!-- It can only show product details when you click any one of product list -->
+<!-- Otherwise, it won't get product details on the page -->
+<!-- Actual working is here -->
+<!-- It gets the product details with product id from route parameters. So, routing is strictly necessary -->
+<div *ngIf="product">
+  <p>{{ product.name }}</p>
+  <!-- currency is a pipe which is used to transform number into text strings -->
+  <p>{{ product.price | currency }}</p>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>

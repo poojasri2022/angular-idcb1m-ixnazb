@@ -1,0 +1,6 @@
+<h2>Shipping Prices</h2>
+<!-- If you don't give async pipe here, you will get error -->
+<div *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
